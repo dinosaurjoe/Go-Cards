@@ -6,10 +6,16 @@ import (
 "os"
 )
 
-
 func main() {
-  reader := bufio.NewReader(os.Stdin)
-  fmt.Print("Enter text: ")
-  text, _ := reader.ReadString('\n')
-  fmt.Println(text)
+  input := input()
+  fmt.Println(input)
 }
+
+func input() string {
+    reader := bufio.NewReader(os.Stdin)
+    fmt.Print("Enter text: ")
+    text, _ := reader.ReadString('\n')
+    return text
+}
+
+
